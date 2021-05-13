@@ -1,12 +1,10 @@
 <?php
-// To connect to the database
-// This code is called by other php-files to use the database
-mysqli_connect("localhost","root","");
-mysql_select_db("");
+$mysqli = @new mysqli("localhost","root","");
 mysql_query('SET NAMES "UTF8"');
 
 // Check connection
-if (mysqli_connect_errno()) {
-  print_r ("Không thể kết nối đến MySQL vì lỗi: " . mysqli_connect_error());
+if ($mysqli -> connect_errno) {
+  echo ("Không thể kết nối đến MySQL vì lỗi: " . $mysqli->connect_errno);
+  exit();
 }
 ?>

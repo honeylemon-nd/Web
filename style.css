@@ -2,23 +2,69 @@ body {
   background-color: #f1f1f1;
 }
 
+.top-most-bar {
+  position: absolute;
+  right: 0;
+}
+
+.login-text {
+  margin-left: 1px;
+  margin-right: 1px;
+  border-right: 1px solid;
+  border-left: 1px solid;
+  color: #000000;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.register-text {
+  margin-right: 20px;
+  border-right: 1px solid;
+  color: #000000;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
 .divide {
-  width: 1500px;
-  height: 50px;
+  min-width: 700px;
+  position: absolute;
   display: flex;
-  background-color: #f1f1f1;
-  margin-left: 30px;
 }
 
-.searchbar {
-  display: flex;
-  flex-basis: 1;
+.web-title {
+  margin-right: 240px;
 }
 
-#search-btn {
-  background-color: blue;
+.divide input[type=text] {
+  width: 600px;
+  margin-top: 10px;
+  font-size: 18px;
+  border: none;
 }
 
-td {
-  width: 250px;
+.divide .searchbar button {
+  background: #4585f3;
+  font-size: 18px;
+  width: 50px;
+  padding: 5px;
+  margin-top: 8px;
+  margin-right: 10px;
+  border: none;
+  color: white;
+}
+
+.text-title {
+  font-weight: bold;
+}
+
+.appdata {
+  width: 15rem;
+  height: 12rem;
+  border-style: solid;
+  border-width: 1px;
+  background-color: white;
+}
+
+.footer {
+  font-size: 15px;
 }
