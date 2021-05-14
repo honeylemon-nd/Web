@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="/style.css" />
 </head>
 
-<body id="body">
+<body class="index-body">
     <!--Tạo ra thanh để login hoặc register-->
     <header>
         <div class="top-most-bar">
-            <a href="/login.php" class="login-text">Login </a>
-            <a href="/register.php" class="register-text">Register</a>
+            <a href="../tai_khoan/login.php" class="login-text">Login </a>
+            <a href="../tai_khoan/register.php" class="register-text">Register</a>
         </div>
     </header>
     <!--Hàng có chữ Google Play-->
@@ -26,7 +26,7 @@
         <div class="searchbar">
             <form action="/search.php">
                 <input type="text" id="search-input" placeholder="Search..." method="get" />
-                <button type="button"><i class="fa fa-search"></i></button>
+                <button type="button" id="search-button"><i class="fa fa-search"></i></button>
             </form>
         </div>
     </div><br /><br /><br />

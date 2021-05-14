@@ -1,4 +1,4 @@
-body {
+.index-body {
   background-color: #f1f1f1;
 }
 
@@ -67,4 +67,30 @@ body {
 
 .footer {
   font-size: 15px;
+}
+
+.container {
+  background-color: #f1f1f1;
+  margin-top: 100px;
+  width: 600px;
+  clear: both;
+  border: 1px solid;
+}
+
+.container-h3 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.container label {
+  text-align: justify;
+}
+
+.container input {
+  width: 75%;
+  clear: both;
+}
+
+.container p {
+  text-align: center;
 }
