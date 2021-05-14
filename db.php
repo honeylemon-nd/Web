@@ -1,8 +1,7 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "");
-$mysqli -> query('SET NAMES "UTF8"');
-if ($mysqli -> connect_errno) {
-  echo ("Không thể kết nối đến MySQL vì lỗi: " . $mysqli -> connect_errno);
+$mysqli = mysqli_connect("localhost", "root", "", "web_register");
+if (mysqli_connect_errno()) {
+  echo ("Không thể kết nối đến MySQL vì lỗi: " . mysqli_connect_error());
   exit();
 }
 ?>

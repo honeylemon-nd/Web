@@ -1,5 +1,5 @@
 <?php
-require('../db.php');
+require('db.php');
 // Kiểm tra xem có bất kỳ tham số rỗng hay không
 if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password'])) {
     if ((empty($_POST['username'])) == false && (empty($_POST['email'])) == false && (empty($_POST['password'])) == false) {
@@ -8,7 +8,7 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
         // Kiểm tra xem email có hợp lệ không
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $email_check = mysqli_query($mysqli, "SELECT `Email` FROM `users` WHERE Email = '$email'");
-            if (mysqli_num_rows($email_check) > 0) {
+            if (mysqli_num_rows($email_check) == 1) {
                 $msg_err = "Email này đã được đăng ký!";
             } else {
                 $mahoa_password = password_hash($_POST['password'], PASSWORD_DEFAULT);

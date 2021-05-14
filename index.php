@@ -13,11 +13,11 @@
 </head>
 
 <body class="index-body">
-    <!--Tạo ra thanh để login hoặc register-->
+    <!--Tạo ra thanh login hoặc register-->
     <header>
         <div class="top-most-bar">
-            <a href="../tai_khoan/login.php" class="login-text">Login </a>
-            <a href="../tai_khoan/register.php" class="register-text">Register</a>
+            <a href="login.php" class="login-text">Login </a>
+            <a href="register.php" class="register-text">Register</a>
         </div>
     </header>
     <!--Hàng có chữ Google Play-->

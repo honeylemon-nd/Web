@@ -1,20 +1,10 @@
 <?php
 session_start();
-require ('../db.php');
-require ('../insert.php');
-if (isset($_REQUEST['username'])) {
-    // stripslashes dùng để loại bỏ dấu "\"
-    $username = stripslashes($_REQUEST['username']);
-    // mysqli_real_escape_string dùng để loại bỏ ký tự đặc biệt
-    $username = mysqli_real_escape_string($mysqli, $username);
-    $email = stripslashes($_REQUEST['email']);
-    $email =  mysqli_real_escape_string($mysqli, $email);
-    // hàm password_hash để mã hóa mật khẩu
-    $password = password_hash($_REQUEST['password'], PASSWORD_DEFAULT);
-    $password = mysqli_real_escape_string($mysqli, $password);
-    $insert = "INSERT INTO `user` (Username, Password, Email)
-    VALUES ('$username', '$password', '$email')";
-    $final = mysqli_real_escape_string($mysqli, $insert);
+require ('db.php');
+require ('insert.php');
+if (isset($_SESSION['username'])) {
+    header('Location: index2.php');
+    exit;
 }
 ?>
 
@@ -41,15 +31,14 @@ if (isset($_REQUEST['username'])) {
             <button type="submit">Đăng ký</button><br />
             <p> * Bắt buộc </p>
         </div>
+        <?php
+        if (isset($final)) {
+            echo ($msg_success);
+        } else if (isset($final)) {
+            echo ("Đăng ký không thành công vì lỗi" . $msg_error);
+        }
+        ?>
     </form>
 </center>
-<?php
-    if (isset($final)) {
-        echo ($msg_success);
-        header("Location: login.php");
-    } else if (isset($final)) {
-        echo ("Đăng ký không thành công vì lỗi" . $msg_error);
-    }
-?>
 </body>
 </html>
